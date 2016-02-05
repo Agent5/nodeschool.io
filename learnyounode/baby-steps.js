@@ -1,14 +1,7 @@
-console.log(process.argv);
+var result = 0;
 
-var argumentLength = process.argv.length - 2;
-
-console.log("Argument length = " + argumentLength);
-
-var sumBit = 0;
-
-for (i = 0; i < argumentLength; i++) {
-  var j = i + 2;
-  sumBit += +process.argv[j];
+for (var i = 2; i < process.argv.length; i++) {
+  result += parseInt(process.argv[i]);
 }  
 
-console.log(sumBit);
+console.log(result);
